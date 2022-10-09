@@ -3,15 +3,23 @@
   <div>
     <h3>Drello Login</h3>
     <div>
-      <label>Username: </label>
-      <input id="user" placeholder="John" formControlName="username"/>
+      <mat-form-field id="user" appearance="fill" formControlName="username">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="John">
+      </mat-form-field>
     </div>
+
     <div>
-      <label>Password: </label>
-      <input id="pass" placeholder="****" formControlName="password"/>
+      <mat-form-field id="pass" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="****" formControlName="password">
+      </mat-form-field>
     </div>
+
     <div>
-      <button>Login</button>
+      <button mat-raised-button color="Primary">Login</button>
     </div>
   </div>
+</form>
+<form class="example-form">
 </form>
