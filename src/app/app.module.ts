@@ -13,6 +13,7 @@ import { TaskComponent } from './task/task.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,18 +1,18 @@
 
-<form [formGroup]="loginform" class="login-panel debug">
+<form [formGroup]="loginform" class="login-panel debug" (ngSubmit)="onSubmit(loginform.value)">
   <div>
     <h3>Drello Login</h3>
     <div>
-      <mat-form-field id="user" appearance="fill" formControlName="username">
+      <mat-form-field id="user" appearance="fill">
         <mat-label>Username</mat-label>
-        <input matInput placeholder="John">
+        <input matInput placeholder="John" formControlName="username">
       </mat-form-field>
     </div>
 
     <div>
       <mat-form-field id="pass" appearance="fill">
         <mat-label>Password</mat-label>
-        <input matInput placeholder="****" formControlName="password">
+        <input matInput type="password" placeholder="****" formControlName="password">
       </mat-form-field>
     </div>
 
@@ -20,6 +20,4 @@
       <button mat-raised-button color="Primary">Login</button>
     </div>
   </div>
-</form>
-<form class="example-form">
 </form>

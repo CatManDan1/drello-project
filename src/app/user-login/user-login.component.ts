@@ -5,6 +5,7 @@ import {
   Validators,
   AbstractControl
 } from '@angular/forms';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-user-login',
@@ -16,7 +17,7 @@ export class UserLoginComponent implements OnInit {
   username!: AbstractControl;
   password!: AbstractControl;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private auth: AuthenticationService) { }
 
   ngOnInit(): void {
     this.buildForm();
@@ -36,6 +37,7 @@ export class UserLoginComponent implements OnInit {
     return this.loginform.controls[key];
   }
 
-  onSubmit() {
+  onSubmit(loginDetails: any) {
+    this.auth.loginUser(loginDetails);
   }
 }
